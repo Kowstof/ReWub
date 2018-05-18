@@ -6,11 +6,11 @@
 
 $(document).ready(function(){
   $('.play-icon').click(function(){
-    if ($(this).text() == "play-arrow") {
-      $(this).text() = "pause";
+    if ($(this).val() == "play-arrow") {
+      $(this).val("pause");
     }
     else {
-      $(this).text() = "play-arrow";
+      $(this).val("play-arrow");
     }
   });
 });
