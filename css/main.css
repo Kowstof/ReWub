@@ -5,9 +5,11 @@ body, body * {
 }
 
 body {
-  background: white;
+  background: #f2f2f2;
 }
 
+/* Navbar
+––––––––––––––––––––––––––––––––––––––– */
 nav {
   background: dodgerblue;
   height: 10vh;
@@ -19,7 +21,7 @@ nav {
 
 #logo {
   font-size: 4em;
-  font-family: sans-serif;
+  font-family: 'Bungee', sans-serif;
   color: white;
   margin: 0 30px;
 }
@@ -44,4 +46,36 @@ nav {
   color: white;
   font-size: 3.5em;
   float: right;
+}
+
+/* Main
+––––––––––––––––––––––––––––––––––––––– */
+#main {
+  background: white;
+  width: 70%;
+  margin: 0 15%;
+  height: 100%
+}
+
+/* Song container
+––––––––––––––––––––––––––––––––––––––– */
+.song {
+  margin: 50px;
+}
+
+.thumb {
+  width: 160px;
+  width: 160px;
+}
+
+.play-icon {
+  color: white;
+  background: dodgerblue;
+  border-radius: 50%;
+  font-size: 3em;
+}
+
+.play-icon:hover {
+  background: #1873cc;
+  cursor: pointer;
 }
