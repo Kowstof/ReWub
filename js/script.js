@@ -5,7 +5,7 @@
 });*/
 
 $(document).ready(function(){
-  $('.icon-container').click(function(){
+  $('.play-icon').click(function(){
       console.log("stuf");
     if ($('.play-icon').hasClass("fa-play")) {
       $('.play-icon').removeClass("fa-play");
