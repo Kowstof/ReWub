@@ -5,12 +5,15 @@
 });*/
 
 $(document).ready(function(){
-  $('.play-icon').click(function(){
-    if ($(this).val() == "play-arrow") {
-      $(this).val("pause");
+  $('.icon-container').click(function(){
+      console.log("stuf");
+    if ($('.play-icon').hasClass("fa-play")) {
+      $('.play-icon').removeClass("fa-play");
+      $('.play-icon').addClass("fa-pause");
     }
     else {
-      $(this).val("play-arrow");
+      $('.play-icon').removeClass("fa-pause");
+      $('.play-icon').addClass("fa-play");
     }
   });
 });

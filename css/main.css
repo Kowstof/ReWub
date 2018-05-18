@@ -72,7 +72,13 @@ nav {
   color: white;
   background: dodgerblue;
   border-radius: 50%;
-  font-size: 3em;
+  font-size: 2em;
+  height: 2em;
+  width: 2em;
+}
+.play-icon::before {
+    margin-top: 1vh;
+    margin: 0.5em;
 }
 
 .play-icon:hover {
