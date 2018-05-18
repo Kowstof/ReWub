@@ -1,5 +1,5 @@
 var wavesurfer = WaveSurfer.create({
-    container: '.waveform',
+    container: '#waveform',
     waveColor: '#8ec7ff',
     progressColor: 'dodgerblue'
 });
