@@ -4,4 +4,4 @@ var wavesurfer = WaveSurfer.create({
     progressColor: 'dodgerblue'
 });
 
-wavesurfer('audio/test.mp3')
+wavesurfer('../audio/test.mp3')
