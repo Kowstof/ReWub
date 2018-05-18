@@ -1,6 +1,7 @@
 body, body * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -27,6 +28,16 @@ nav {
   width: 400px;
   background: #8ec7ff;
   margin: 0 25px;
+  display: inline-flex;
+}
+
+#search-bar-textbox {
+  font-size: 2em;
+  width: 344px;
+  color: white;
+  border: none;
+  background: #8ec7ff;
+  padding: 5px 15px;
 }
 
 #search-icon {
