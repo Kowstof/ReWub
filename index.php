@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<?php
+?>
 <html lang="en">
   <head>
 
@@ -53,11 +54,13 @@
             </div>
           </div>
           <div class="waveform">
-            <!-- wavesurfer.js will fill the content -->
-            <h1>WOOO PLACEHOLDEEER</h1>
+            <canvas id="canvas"></canvas>
+            <audio id="audio"></audio>
           </div>
         </div>
       </div>
     </div>
   </body>
 </html>
+<?
+?>
