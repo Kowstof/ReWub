@@ -8,14 +8,18 @@ $(document).ready(function(){
   var audio = document.getElementById("audio");
   audio.crossOrigin = "anonymous";
   audio.src = "audio/test.mp3";
+  // audio.load();
 
   $('.play-icon').click(function(){
-      console.log("stuf");
     if ($('.play-icon').hasClass("fa-play")) {
       $('.play-icon').removeClass("fa-play");
       $('.play-icon').addClass("fa-pause");
-      audio.load();
-      audio.play();
+      if(audio.readyState == 0) {
+        audio.load();
+        audio.play();
+      } else if(audio.readyState >= 3) {
+        audio.play();
+      }
 
       var context = new AudioContext();
       var src = context.createMediaElementSource(audio);
@@ -72,6 +76,7 @@ $(document).ready(function(){
     else {
       $('.play-icon').removeClass("fa-pause");
       $('.play-icon').addClass("fa-play");
+      audio.pause();
     }
   });
 });
