@@ -1,65 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
 
-  <!-- Metadata
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>WubHub 2.0</title>
+    <!-- Metadata
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WubHub 2.0</title>
 
-  <!-- Fonts
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Bungee|Tajawal" rel="stylesheet">
+    <!-- Fonts
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bungee|Tajawal" rel="stylesheet">
 
-  <!-- CSS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="css/main.css">
+    <!-- CSS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="css/main.css">
 
-  <!-- Scripts
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/1.1.10/wavesurfer.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-  <script src="./js/script.js" charset="utf-8"></script>
-</head>
+    <!-- Scripts
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/1.1.10/wavesurfer.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="./js/script.js" charset="utf-8"></script>
+  </head>
 
+  <body>
+    <!-- Navbar
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <nav>
+      <h1 id="logo">WubHub</h1>
+      <div id="search-bar">
+        <input type="text" id="search-bar-textbox"></input>
+        <i class="material-icons" id="search-icon">search</i>
+      </div>
+    </nav>
 
-
-<body>
-  <!-- Navbar
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <nav>
-    <h1 id="logo">WubHub</h1>
-    <div id="search-bar">
-      <input type="text" id="search-bar-textbox"></input>
-      <i class="material-icons" id="search-icon">search</i>
-    </div>
-  </nav>
-
-  <!-- Main
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div id="main">
-    <!--Song Container-->
-    <div class="song">
-      <img src="img/thumbnail.png" alt="Thumbnail" class="thumb">
-      <!--Everything to the right of thumbnail-->
-      <div class="song-content">
-        <div class="song-header">
-          <i class="fas fa-play play-icon"></i>
-          <div class="song-details">
-            <p class="artist">The Noisy Freaks</p>
-            <p class="song-name">Cheer Song</p>
+    <!-- Main
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div id="main">
+      <!--Song Container-->
+      <div class="song">
+        <img src="img/thumbnail.png" alt="Thumbnail" class="thumb">
+        <!--Everything to the right of thumbnail-->
+        <div class="song-content">
+          <div class="song-header">
+            <i class="fas fa-play play-icon"></i>
+            <div class="song-details">
+              <p class="artist">The Noisy Freaks</p>
+              <p class="song-name">Cheer Song</p>
+            </div>
           </div>
-        </div>
-        <div class="waveform">
-          <!-- wavesurfer.js will fill the content -->
-          <h1>WOOO PLACEHOLDEEER</h1>
+          <div class="waveform">
+            <!-- wavesurfer.js will fill the content -->
+            <h1>WOOO PLACEHOLDEEER</h1>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</body>
+  </body>
 </html>
