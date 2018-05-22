@@ -1,4 +1,3 @@
-
 <html lang="en">
   <head>
 
@@ -21,9 +20,10 @@
 
     <!-- Scripts
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/1.1.10/wavesurfer.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/2.0.5/wavesurfer.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="./js/script.js" charset="utf-8"></script>
+    <script src="js/script.js" charset="utf-8"></script>
+
   </head>
 
   <body>
@@ -53,11 +53,26 @@
             </div>
           </div>
           <div class="waveform">
-            <canvas id="canvas"></canvas>
-            <audio id="audio"></audio>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- Wavesurvfer
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <script>
+  		var wavesurfer = WaveSurfer.create({
+  		  container: '.waveform',
+  		  waveColor: '#8ec7ff',
+  		  progressColor: 'dodgerblue',
+        barHeight: 0.75,
+        height: 96,
+        barWidth: 2,
+        cursorColor: '#1873cc',
+        cursorWidth: 3
+  		});
+
+  		wavesurfer.load('audio/test.mp3');
+  	</script>
   </body>
 </html>

@@ -14,6 +14,7 @@ $(document).ready(function(){
     if ($('.play-icon').hasClass("fa-play")) {
       $('.play-icon').removeClass("fa-play");
       $('.play-icon').addClass("fa-pause");
+      
       if(audio.readyState == 0) {
         audio.load();
         audio.play();
