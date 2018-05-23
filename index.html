@@ -46,7 +46,7 @@
         <!--Everything to the right of thumbnail-->
         <div class="song-content">
           <div class="song-header">
-            <i class="fas fa-play play-icon" id="play" onclick="wavesurfer.playPause()" ></i>
+            <i class="fas fa-arrow-down play-icon" id="play" onclick="wavesurfer.playPause()" ></i>
             <div class="song-details">
               <p class="artist">The Noisy Freaks</p>
               <p class="song-name">Cheer Song</p>
@@ -75,38 +75,26 @@
 
       var dondun = false;
 
-      $(document).ready(function() {
-        $("#play").click(function () {
+      $(document).ready(function(){
+
+        $('#play').click(function(){
           if(!dondun) {
             wavesurfer.load('audio/test.mp3');
             dondun = true;
-          }
-        });
-      });
-
-      /*$(document).ready(function(){
-        var audio = document.getElementById("audio");
-        // audio.crossOrigin = "anonymous";
-        audio.src = "audio/test.mp3";
-
-        $('.play-icon').click(function(){
-          if ($('.play-icon').hasClass("fa-play")) {
-            $('.play-icon').removeClass("fa-play");
-            $('.play-icon').addClass("fa-pause");
-
-            if(audio.readyState == 0) {
-              audio.load();
-              audio.play();
-            } else if(audio.readyState >= 3) {
-              audio.play();
-            }
+            $('#play').removeClass("fa-ellipsis-h");
+            $('#play').addClass("fa-play");
           } else {
-            $('.play-icon').removeClass("fa-pause");
-            $('.play-icon').addClass("fa-play");
-            audio.pause();
+            if ($('#play').hasClass("fa-play")) {
+              $('#play').removeClass("fa-play");
+              $('#play').addClass("fa-pause");
+            } else {
+              $('#play').removeClass("fa-pause");
+              $('#play').addClass("fa-play");
+            }
           }
         });
-      });*/
+
+      });
 
   	</script>
   </body>
