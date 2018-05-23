@@ -24,6 +24,10 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="js/script.js" charset="utf-8"></script>
 
+    <script type="text/javascript">
+      var playing = false;
+    </script>
+
   </head>
 
   <body>
@@ -75,18 +79,22 @@
             $(document).ready(function(){
 
               $('#play1').click(function(){
-                if(!dondun1) {
-                  wavesurfer1.load('audio/test.mp3');
-                  dondun1 = true;
-                  $('#play1').removeClass("fa-ellipsis-h");
-                  $('#play1').addClass("fa-play");
-                } else {
-                  if ($('#play1').hasClass("fa-play")) {
-                    $('#play1').removeClass("fa-play");
-                    $('#play1').addClass("fa-pause");
-                  } else {
-                    $('#play1').removeClass("fa-pause");
+                if(!playing) {
+                  if(!dondun1) {
+                    wavesurfer1.load('audio/test.mp3');
+                    dondun1 = true;
+                    $('#play1').removeClass("fa-ellipsis-h");
                     $('#play1').addClass("fa-play");
+                  } else {
+                    if ($('#play1').hasClass("fa-play")) {
+                      $('#play1').removeClass("fa-play");
+                      $('#play1').addClass("fa-pause");
+                      playing = true;
+                    } else {
+                      $('#play1').removeClass("fa-pause");
+                      $('#play1').addClass("fa-play");
+                      playing = false;
+                    }
                   }
                 }
               });
@@ -131,18 +139,22 @@
             $(document).ready(function(){
 
               $('#play2').click(function(){
-                if(!dondun2) {
-                  wavesurfer2.load('audio/sark.mp3');
-                  dondun2 = true;
-                  $('#play2').removeClass("fa-ellipsis-h");
-                  $('#play2').addClass("fa-play");
-                } else {
-                  if ($('#play2').hasClass("fa-play")) {
-                    $('#play2').removeClass("fa-play");
-                    $('#play2').addClass("fa-pause");
-                  } else {
-                    $('#play2').removeClass("fa-pause");
+                if(!playing) {
+                  if(!dondun2) {
+                    wavesurfer2.load('audio/sark.mp3');
+                    dondun2 = true;
+                    $('#play2').removeClass("fa-ellipsis-h");
                     $('#play2').addClass("fa-play");
+                  } else {
+                    if ($('#play2').hasClass("fa-play")) {
+                      $('#play2').removeClass("fa-play");
+                      $('#play2').addClass("fa-pause");
+                      playing = true;
+                    } else {
+                      $('#play2').removeClass("fa-pause");
+                      $('#play2').addClass("fa-play");
+                      playing = false;
+                    }
                   }
                 }
               });
