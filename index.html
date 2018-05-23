@@ -35,6 +35,20 @@
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <nav>
       <h1 id="logo">WubHub</h1>
+
+      <!--Navbar Playback-->
+      <div id="nav-playback">
+        <div class="nav-song-details">
+          <p class="nav-artist">The Noisy Freaks</p>
+          <p class="nav-song-name">Cheer Song</p>
+        </div>
+
+        <i class="fas fa-step-backward nav-play-icon"></i>
+        <i class="fas fa-play nav-play-icon"></i>
+        <i class="fas fa-step-forward nav-play-icon"></i>
+      </div>
+
+      <!--Search Bar-->
       <div id="search-bar">
         <input type="text" id="search-bar-textbox"></input>
         <i class="material-icons" id="search-icon">search</i>
@@ -79,22 +93,20 @@
             $(document).ready(function(){
 
               $('#play1').click(function(){
-                if(!playing) {
-                  if(!dondun1) {
-                    wavesurfer1.load('audio/test.mp3');
-                    dondun1 = true;
-                    $('#play1').removeClass("fa-ellipsis-h");
-                    $('#play1').addClass("fa-play");
+                if(!dondun1 && !playing) {
+                  wavesurfer1.load('audio/test.mp3');
+                  dondun1 = true;
+                  $('#play1').removeClass("fa-ellipsis-h");
+                  $('#play1').addClass("fa-play");
+                } else {
+                  if ($('#play1').hasClass("fa-play") && !playing) {
+                    $('#play1').removeClass("fa-play");
+                    $('#play1').addClass("fa-pause");
+                    playing = true;
                   } else {
-                    if ($('#play1').hasClass("fa-play")) {
-                      $('#play1').removeClass("fa-play");
-                      $('#play1').addClass("fa-pause");
-                      playing = true;
-                    } else {
-                      $('#play1').removeClass("fa-pause");
-                      $('#play1').addClass("fa-play");
-                      playing = false;
-                    }
+                    $('#play1').removeClass("fa-pause");
+                    $('#play1').addClass("fa-play");
+                    playing = false;
                   }
                 }
               });
@@ -112,8 +124,8 @@
           <div class="song-header">
             <i class="fas fa-arrow-down play-icon" id="play2" onclick="wavesurfer2.playPause()" ></i>
             <div class="song-details">
-              <p class="artist">The Noisy Freaks</p>
-              <p class="song-name">Cheer Song</p>
+              <p class="artist">Asian Parents</p>
+              <p class="song-name">Baby Shark</p>
             </div>
           </div>
           <div class="waveform2">
@@ -139,22 +151,20 @@
             $(document).ready(function(){
 
               $('#play2').click(function(){
-                if(!playing) {
-                  if(!dondun2) {
-                    wavesurfer2.load('audio/sark.mp3');
-                    dondun2 = true;
-                    $('#play2').removeClass("fa-ellipsis-h");
-                    $('#play2').addClass("fa-play");
+                if(!dondun2 && !playing) {
+                  wavesurfer2.load('audio/sark.mp3');
+                  dondun2 = true;
+                  $('#play2').removeClass("fa-ellipsis-h");
+                  $('#play2').addClass("fa-play");
+                } else {
+                  if ($('#play2').hasClass("fa-play") && !playing) {
+                    $('#play2').removeClass("fa-play");
+                    $('#play2').addClass("fa-pause");
+                    playing = true;
                   } else {
-                    if ($('#play2').hasClass("fa-play")) {
-                      $('#play2').removeClass("fa-play");
-                      $('#play2').addClass("fa-pause");
-                      playing = true;
-                    } else {
-                      $('#play2').removeClass("fa-pause");
-                      $('#play2').addClass("fa-play");
-                      playing = false;
-                    }
+                    $('#play2').removeClass("fa-pause");
+                    $('#play2').addClass("fa-play");
+                    playing = false;
                   }
                 }
               });

@@ -20,7 +20,7 @@ nav {
 }
 
 #logo {
-  font-size: 4em;
+  font-size: 3.5em;
   font-family: 'Bungee', sans-serif;
   color: white;
   margin: 0 30px;
@@ -115,4 +115,31 @@ nav {
 
 .song-name {
   font-size: 20px;
+}
+
+/* Navbar Playback
+––––––––––––––––––––––––––––––––––––––– */
+.nav-song-details {
+  float: left;
+}
+
+.nav-artist {
+  font-size: 20px;
+  color: #777;
+}
+
+.nav-song-name {
+  font-size: 25px;
+  color: white;
+}
+
+.nav-play-icon {
+  color: white;
+  font-size: 30px;
+  padding: 0 15px;
+}
+
+.nav-play-icon:hover {
+  cursor: pointer;
+  color: #8ec7ff;
 }
