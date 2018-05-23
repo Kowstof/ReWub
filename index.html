@@ -46,57 +46,113 @@
         <!--Everything to the right of thumbnail-->
         <div class="song-content">
           <div class="song-header">
-            <i class="fas fa-arrow-down play-icon" id="play" onclick="wavesurfer.playPause()" ></i>
+            <i class="fas fa-arrow-down play-icon" id="play1" onclick="wavesurfer1.playPause()" ></i>
             <div class="song-details">
               <p class="artist">The Noisy Freaks</p>
               <p class="song-name">Cheer Song</p>
             </div>
           </div>
-          <div class="waveform">
+          <div class="waveform1">
           </div>
+          <!-- Wavesurvfer
+          –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+          <script>
+
+        		var wavesurfer1 = WaveSurfer.create({
+        		  container: '.waveform1',
+        		  waveColor: '#8ec7ff',
+        		  progressColor: 'dodgerblue',
+              barHeight: 0.85,
+              height: 96,
+              barWidth: 2,
+              cursorColor: '#1873cc',
+              cursorWidth: 3,
+              responsive: true
+        		});
+
+            var dondun1 = false;
+
+            $(document).ready(function(){
+
+              $('#play1').click(function(){
+                if(!dondun1) {
+                  wavesurfer1.load('audio/test.mp3');
+                  dondun1 = true;
+                  $('#play1').removeClass("fa-ellipsis-h");
+                  $('#play1').addClass("fa-play");
+                } else {
+                  if ($('#play1').hasClass("fa-play")) {
+                    $('#play1').removeClass("fa-play");
+                    $('#play1').addClass("fa-pause");
+                  } else {
+                    $('#play1').removeClass("fa-pause");
+                    $('#play1').addClass("fa-play");
+                  }
+                }
+              });
+
+            });
+
+        	</script>
         </div>
       </div>
+
+      <div class="song">
+        <img src="img/shark.png" alt="Thumbnail" class="thumb">
+        <!--Everything to the right of thumbnail-->
+        <div class="song-content">
+          <div class="song-header">
+            <i class="fas fa-arrow-down play-icon" id="play2" onclick="wavesurfer2.playPause()" ></i>
+            <div class="song-details">
+              <p class="artist">The Noisy Freaks</p>
+              <p class="song-name">Cheer Song</p>
+            </div>
+          </div>
+          <div class="waveform2">
+          </div>
+          <!-- Wavesurvfer
+          –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+          <script>
+
+        		var wavesurfer2 = WaveSurfer.create({
+        		  container: '.waveform2',
+        		  waveColor: '#8ec7ff',
+        		  progressColor: 'dodgerblue',
+              barHeight: 0.85,
+              height: 96,
+              barWidth: 2,
+              cursorColor: '#1873cc',
+              cursorWidth: 3,
+              responsive: true
+        		});
+
+            var dondun2 = false;
+
+            $(document).ready(function(){
+
+              $('#play2').click(function(){
+                if(!dondun2) {
+                  wavesurfer2.load('audio/sark.mp3');
+                  dondun2 = true;
+                  $('#play2').removeClass("fa-ellipsis-h");
+                  $('#play2').addClass("fa-play");
+                } else {
+                  if ($('#play2').hasClass("fa-play")) {
+                    $('#play2').removeClass("fa-play");
+                    $('#play2').addClass("fa-pause");
+                  } else {
+                    $('#play2').removeClass("fa-pause");
+                    $('#play2').addClass("fa-play");
+                  }
+                }
+              });
+
+            });
+
+        	</script>
+        </div>
+      </div>
+
     </div>
-
-    <!-- Wavesurvfer
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <script>
-
-  		var wavesurfer = WaveSurfer.create({
-  		  container: '.waveform',
-  		  waveColor: '#8ec7ff',
-  		  progressColor: 'dodgerblue',
-        barHeight: 0.85,
-        height: 96,
-        barWidth: 2,
-        cursorColor: '#1873cc',
-        cursorWidth: 3,
-        responsive: true
-  		});
-
-      var dondun = false;
-
-      $(document).ready(function(){
-
-        $('#play').click(function(){
-          if(!dondun) {
-            wavesurfer.load('audio/test.mp3');
-            dondun = true;
-            $('#play').removeClass("fa-ellipsis-h");
-            $('#play').addClass("fa-play");
-          } else {
-            if ($('#play').hasClass("fa-play")) {
-              $('#play').removeClass("fa-play");
-              $('#play').addClass("fa-pause");
-            } else {
-              $('#play').removeClass("fa-pause");
-              $('#play').addClass("fa-play");
-            }
-          }
-        });
-
-      });
-
-  	</script>
   </body>
 </html>
