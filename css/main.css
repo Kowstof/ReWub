@@ -13,29 +13,26 @@ body {
 ––––––––––––––––––––––––––––––––––––––– */
 nav {
   background: dodgerblue;
-  height: 10vh;
+  height: 7vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 15%;
 }
 
 #logo {
-  font-size: 3.5em;
+  font-size: 2.5em;
   font-family: 'Bungee', sans-serif;
   color: white;
-  margin: 0 30px;
 }
 
 #search-bar {
-  width: 400px;
   background: #8ec7ff;
-  margin: 0 25px;
   display: inline-flex;
 }
 
 #search-bar-textbox {
-  font-size: 2em;
-  width: 344px;
+  font-size: 1em;
   color: white;
   border: none;
   background: #8ec7ff;
@@ -43,8 +40,8 @@ nav {
 }
 
 #search-icon {
+  font-size: 2em;
   color: white;
-  font-size: 3.5em;
   float: right;
   margin-right: 7px;
 }
@@ -119,27 +116,47 @@ nav {
 
 /* Navbar Playback
 ––––––––––––––––––––––––––––––––––––––– */
+#nav-playback {
+  display: inline-flex;
+  justify-content: center;
+}
+
 .nav-song-details {
-  float: left;
+  line-height: 1;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  margin: 0 7px;
 }
 
 .nav-artist {
-  font-size: 20px;
-  color: #777;
+  font-size: 15px;
+  color: lightgray;
 }
 
 .nav-song-name {
-  font-size: 25px;
+  font-size: 18px;
   color: white;
+}
+
+.fas {
+  display: flex;
+  justify-content: center;
 }
 
 .nav-play-icon {
   color: white;
-  font-size: 30px;
+  font-size: 1.5em;
   padding: 0 15px;
+  padding-top: 5px;
 }
 
 .nav-play-icon:hover {
   cursor: pointer;
   color: #8ec7ff;
+}
+
+.nav-thumb {
+  height: 5vh;
+  width: 5vh;
 }
