@@ -1,0 +1,177 @@
+<html lang="en">
+  <head>
+
+    <!-- Metadata
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WubHub 2.0</title>
+
+    <!-- Fonts
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bungee|Tajawal" rel="stylesheet">
+
+    <!-- CSS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Scripts
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/2.0.6/wavesurfer.min.js"></script>
+    <!--<script src="js/wavesurfer.min.js"></script>-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="js/script.js" charset="utf-8"></script>
+
+    <script type="text/javascript">
+      var playing = false;
+    </script>
+
+  </head>
+
+  <body>
+    <!-- Navbar
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <nav>
+      <!--Logo-->
+      <h1 id="logo">WH</h1>
+
+      <!--Search Bar-->
+      <div id="search-bar">
+        <input type="text" id="search-bar-textbox" placeholder="Search">
+          <i class="material-icons" id="search-icon">search</i>
+        </input>
+      </div>
+    </nav>
+
+    <!-- Navbar
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div id="pb-container">
+
+    </div>
+
+    <!-- Main
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div id="main">
+      <!--Song Container-->
+      <div class="song">
+        <img src="img/thumbnail.png" alt="Thumbnail" class="thumb">
+        <!--Everything to the right of thumbnail-->
+        <div class="song-content">
+          <div class="song-header">
+            <i class="fas fa-arrow-down play-icon" id="play1" onclick="wavesurfer1.playPause()" ></i>
+            <div class="song-details">
+              <p class="artist">The Noisy Freaks</p>
+              <p class="song-name">Cheer Song</p>
+            </div>
+          </div>
+          <div class="waveform1">
+          </div>
+          <!-- Wavesurvfer
+          –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+          <script>
+
+        		var wavesurfer1 = WaveSurfer.create({
+        		  container: '.waveform1',
+        		  waveColor: '#8c8c8c',
+        		  progressColor: 'dodgerblue',
+              barHeight: 0.85,
+              height: 96,
+              barWidth: 2,
+              cursorColor: '#1873cc',
+              cursorWidth: 3,
+              responsive: true
+        		});
+
+            var dondun1 = false;
+
+            $(document).ready(function(){
+
+              $('#play1').click(function(){
+                if(!dondun1 && !playing) {
+                  wavesurfer1.load('audio/test.mp3');
+                  dondun1 = true;
+                  $('#play1').removeClass("fa-ellipsis-h");
+                  $('#play1').addClass("fa-play");
+                } else {
+                  if ($('#play1').hasClass("fa-play") && !playing) {
+                    $('#play1').removeClass("fa-play");
+                    $('#play1').addClass("fa-pause");
+                    playing = true;
+                  } else {
+                    $('#play1').removeClass("fa-pause");
+                    $('#play1').addClass("fa-play");
+                    playing = false;
+                  }
+                }
+              });
+
+            });
+
+        	</script>
+        </div>
+      </div>
+      <div class="song">
+        <img src="img/shark.png" alt="Thumbnail" class="thumb">
+        <!--Everything to the right of thumbnail-->
+        <div class="song-content">
+          <div class="song-header">
+            <i class="fas fa-arrow-down play-icon" id="play2" onclick="wavesurfer2.playPause()" ></i>
+            <div class="song-details">
+              <p class="artist">Asian Parents</p>
+              <p class="song-name">Baby Shark</p>
+            </div>
+          </div>
+          <div class="waveform2">
+          </div>
+
+          <!-- Wavesurvfer
+          –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+          <script>
+
+        		var wavesurfer2 = WaveSurfer.create({
+        		  container: '.waveform2',
+        		  waveColor: '#8ec7ff',
+        		  progressColor: 'dodgerblue',
+              barHeight: 0.85,
+              height: 96,
+              barWidth: 2,
+              cursorColor: '#1873cc',
+              cursorWidth: 3,
+              responsive: true
+        		});
+
+            var dondun2 = false;
+
+            $(document).ready(function(){
+
+              $('#play2').click(function(){
+                if(!dondun2 && !playing) {
+                  wavesurfer2.load('audio/sark.mp3');
+                  dondun2 = true;
+                  $('#play2').removeClass("fa-ellipsis-h");
+                  $('#play2').addClass("fa-play");
+                } else {
+                  if ($('#play2').hasClass("fa-play") && !playing) {
+                    $('#play2').removeClass("fa-play");
+                    $('#play2').addClass("fa-pause");
+                    playing = true;
+                  } else {
+                    $('#play2').removeClass("fa-pause");
+                    $('#play2').addClass("fa-play");
+                    playing = false;
+                  }
+                }
+              });
+
+            });
+
+        	</script>
+        </div>
+      </div>
+
+    </div>
+  </body>
+</html>
